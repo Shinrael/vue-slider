@@ -14,6 +14,8 @@ createApp({
       counter: 0,
       // Flag per abilitare/disabilitare l'autoplay
       autoPlayEnabled: true,
+      // Mi serve per l'evento del double click per andare avanti o indietro
+      direction: 1,
     };
   },
   methods: {
@@ -33,11 +35,15 @@ createApp({
     autoPlay() {
       // Utilizza setInterval per chiamare nextImg ogni 3000 millisecondi (3 secondi)
       setInterval(() => {
-        // Verifica se l'autoplay è abilitato prima di passare all'immagine successiva
         if (this.autoPlayEnabled) {
-          this.nextImg(true);
+          // Utilizza la direzione corrente per determinare la prossima immagine
+          this.nextImg(this.direction > 0);
         }
       }, 3000);
+    },
+    autoPlayDirection() {
+      // Con questo inverto la direzione da 1 a -1
+      this.direction *= -1;
     },
   },
   mounted() {
