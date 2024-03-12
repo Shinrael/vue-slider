@@ -10,6 +10,7 @@ createApp({
         'img/avengers.webp',
       ],
       counter: 0,
+      autoPlayEnabled : true,
     }
   },
   methods:{
@@ -22,8 +23,12 @@ createApp({
       }
     },
     autoPlay(){
-      setInterval(() => this.nextImg(true), 3000);
-    }
+      setInterval(() => {
+      if(this.autoPlayEnabled){
+         this.nextImg(true)
+          }
+        }, 3000);
+      }      
   },
   mounted(){
     this.autoPlay();

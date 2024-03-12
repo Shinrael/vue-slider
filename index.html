@@ -13,7 +13,10 @@
 </head>
 <body>
   <div  id="app" class="main-wrapper">
-    <div class="slider">
+    <div
+      class="slider"
+      @mouseenter="autoPlayEnabled = false"
+      @mouseleave="autoPlayEnabled = true">
       <div class="image-container">
         <img v-for="(img, index) in images" v-show="index === counter" :src="img"> 
       </div>
@@ -30,22 +33,6 @@
           <img :src="img" alt="">
           <div class="overlay"></div>
         </div>
-        <!--<div class="card-container">
-          <img src="assets/img/02.webp" alt="">
-          <div class="overlay"></div>
-        </div>
-        <div class="card-container">
-          <img src="assets/img/03.webp" alt="">
-          <div class="overlay"></div>
-        </div>
-        <div class="card-container">
-          <img src="assets/img/04.webp" alt="">
-          <div class="overlay"></div>
-        </div>
-        <div class="card-container">
-          <img src="assets/img/05.webp" alt="">
-          <div class="overlay"></div>
-        </div> -->
       </div>
     </div>
   </div>
