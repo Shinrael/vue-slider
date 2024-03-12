@@ -3,11 +3,11 @@ createApp({
   data(){
     return{
       images: [
-        '..\img\spiderman.webp',
-        '..\img\stray.webp',
-        '..\img\ratchetclank.webp',
-        '..\img\fortnite.webp',
-        '..\img\avengers.webp',
+        'img/spiderman.webp',
+        'img/stray.webp',
+        'img/ratchetclank.webp',
+        'img/fortnite.webp',
+        'img/avengers.webp',
       ]
     }
   },

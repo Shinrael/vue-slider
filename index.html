@@ -15,7 +15,7 @@
   <div  id="app" class="main-wrapper">
     <div class="slider">
       <div class="image-container">
-        <img v-for="img in images" src="{{img}}"> 
+        <img v-for="img in images" :src="img"> 
       </div>
       <div class="btn-arrow up"><i class="fa-solid fa-chevron-up"></i></div>
 
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  
+
   <script src="js/script.js"></script>
 </body>
 </html>
